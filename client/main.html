@@ -1,0 +1,41 @@
+<head>
+  <title>death_claim_prototype</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Death Claim Prototype System</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container-fluid">
+    <div class="row-fluid">
+      <div class="col-md-8 col-md-offset-2">
+        {{> hello}}
+      </div>
+    </div>
+  </main>
+</body>
+
+<template name="hello">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4>Dashboard</h4>
+    </div>
+    <table class="table">
+      <tbody>
+          <tr>
+            <th scope="row">Account</th>
+            <td>{{counter}} {{TemplateVar.get "account_address"}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Balance</th>
+            <td>{{counter}} {{TemplateVar.get "balance"}}</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</template>
