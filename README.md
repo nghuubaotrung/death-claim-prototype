@@ -1,1 +1,31 @@
-# death-claim-prototype
+## Death Claim Prototype System
+
+### Specs
+#### Backend
+* Geth Version: 1.8.12-stable-37685930
+* Solidity Remix with Solidity Version: 0.4.24
+
+#### Frontend
+* Node JS Version: 9.4.0
+* Meteor Framework Version: 1.7.0.3
+
+#### Network
+* Ropsten Ehtereum Test Network
+
+### Functions
+#### Dashboard
+  * Accounts Management
+  * Blocks Information
+  * Transaction Information
+
+#### For Insurances
+* Policies Management
+  * Policies List with Check Buttons
+  * Showing status of each policies
+
+#### For Hospitals Page
+* Claim Triggers
+  * Policies List with "Death Claim" buttons
+    * Triggering the claim of each policies
+    * Note: Authority Check logic is not available in this prototype phase and will be updated in the next phases.
+

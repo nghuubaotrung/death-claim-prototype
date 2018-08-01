@@ -1,0 +1,29 @@
+<template name="policiesManagementComponent">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4>Policies Management</h4>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <!-- <tbody>
+        {{#each policies}}
+          {{> policiesItem}}
+        {{/each}}
+      </tbody> -->
+    </table>
+  </div>
+</template>
+
+<template name="policiesItem">
+  <tr>
+    <td>{{name}}</td>
+    <td>{{address}}</td>
+    <td>{{status}}</td>
+  </tr>
+</template>
