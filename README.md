@@ -10,7 +10,7 @@
 * Meteor Framework Version: 1.7.0.3
 
 ### Network
-* Ropsten Ehtereum Test Network
+* Ropsten Ethereum Test Network
 
 ## Functions
 ### Dashboard
