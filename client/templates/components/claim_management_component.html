@@ -1,36 +1,36 @@
-<template name="policiesManagementComponent">
-  <div class="panel panel-primary">
+<template name="claimManagementComponent">
+  <div class="panel panel-danger">
     <div class="panel-heading">
-      <h4>Policies Management</h4>
+      <h4>Death Claim Management</h4>
     </div>
     <table class="table">
       <thead>
         <tr>
           <th>Name</th>
           <th>Policy Holder</th>
-          <th>Hospital</th>
+          <th>Insurance Company</th>
           <th>Smart Contract Address</th>
           <th>Status</th>
         </tr>
       </thead>
       <tbody>
         {{#each policies}}
-          {{> policiesItem}}
+          {{> claimItem}}
         {{/each}}
       </tbody>
     </table>
   </div>
 </template>
 
-<template name="policiesItem">
+<template name="claimItem">
   <tr>
     <td>{{name}}</td>
     <td>{{policy_holder}}</td>
-    <td>{{hospital}}</td>
+    <td>{{insurer}}</td>
     <td>{{address}}</td>
     <td>
       <form onSubmit>
-        <button type="button" id={{address}} class="btn btn-success"> Check Status </button>
+        <button type="button" id={{address}} class="btn btn-danger"> Death Claim </button>
       </form>
     </td>
   </tr>

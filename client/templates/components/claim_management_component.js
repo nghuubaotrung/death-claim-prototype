@@ -1,7 +1,7 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
-Template.policiesManagementComponent.helpers({
+Template.claimManagementComponent.helpers({
   //契約情報の取得
   policies: function(){
     return [
@@ -174,7 +174,7 @@ Template.policiesManagementComponent.helpers({
   }
 });
 
-Template.policiesItem.helpers({
+Template.claimItem.helpers({
   name: function(){
     return this.name;
   },
@@ -192,7 +192,7 @@ Template.policiesItem.helpers({
   },
 });
 
-Template.policiesItem.events({
+Template.claimItem.events({
   //証券のステータスの確認
   'click': function(){
     console.log("Policy ID:" + this.address);

@@ -26,3 +26,4 @@ ethereum:blocks
 session
 iron:router
 frozeman:template-var
+http
