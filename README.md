@@ -1,4 +1,5 @@
 ## Death Claim Prototype System
+![The X Project](xproject.png)
 
 ## Specs
 ### Backend
