@@ -10,8 +10,8 @@ Template.policiesManagementComponent.helpers({
         "policy_holder": "AAA 様",
         "hospital": "AAA 病院",
         "insurer": "AAA 生命保険会社",
-        "address": "0xead54481adb159d8c4f579611121369a18361ed6",
-        "abi": [ //application binary interface
+        "address": "0x9f81dc312fa1966ab2675cc88bdb7d9e42687f77",
+        "abi": [
         	{
         		"constant": false,
         		"inputs": [
@@ -65,54 +65,54 @@ Template.policiesManagementComponent.helpers({
         "policy_holder": "BBB 様",
         "hospital": "AAA 病院",
         "insurer": "AAA 生命保険会社",
-        "address": "0x9bce977aee5142ec3f492d3f12b805ef1a387dc4",
+        "address": "0x16ec46375b2b77098991e62c5e6559f3c797fca2",
         "abi": [
-          {
-            "constant": false,
-            "inputs": [
-              {
-                "name": "hellowAddress",
-                "type": "address"
-              }
-            ],
-            "name": "registerBonjour",
-            "outputs": [],
-            "payable": true,
-            "stateMutability": "payable",
-            "type": "function"
-          },
-          {
-            "constant": false,
-            "inputs": [],
-            "name": "notifyCall",
-            "outputs": [],
-            "payable": true,
-            "stateMutability": "payable",
-            "type": "function"
-          },
-          {
-            "constant": true,
-            "inputs": [],
-            "name": "s",
-            "outputs": [
-              {
-                "name": "",
-                "type": "string"
-              }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-          },
-          {
-            "constant": false,
-            "inputs": [],
-            "name": "clearString",
-            "outputs": [],
-            "payable": true,
-            "stateMutability": "payable",
-            "type": "function"
-          }
+        	{
+        		"constant": false,
+        		"inputs": [
+        			{
+        				"name": "hellowAddress",
+        				"type": "address"
+        			}
+        		],
+        		"name": "registerBonjour",
+        		"outputs": [],
+        		"payable": true,
+        		"stateMutability": "payable",
+        		"type": "function"
+        	},
+        	{
+        		"constant": false,
+        		"inputs": [],
+        		"name": "notifyCall",
+        		"outputs": [],
+        		"payable": true,
+        		"stateMutability": "payable",
+        		"type": "function"
+        	},
+        	{
+        		"constant": true,
+        		"inputs": [],
+        		"name": "s",
+        		"outputs": [
+        			{
+        				"name": "",
+        				"type": "string"
+        			}
+        		],
+        		"payable": false,
+        		"stateMutability": "view",
+        		"type": "function"
+        	},
+        	{
+        		"constant": false,
+        		"inputs": [],
+        		"name": "clearString",
+        		"outputs": [],
+        		"payable": true,
+        		"stateMutability": "payable",
+        		"type": "function"
+        	}
         ]
       },
       {
@@ -120,7 +120,7 @@ Template.policiesManagementComponent.helpers({
         "policy_holder": "BBB 様",
         "hospital": "AAA 病院",
         "insurer": "AAA 生命保険会社",
-        "address": "0x0098e880b699cdc2ef9ff1158f4826a71d2a2778",
+        "address": "0xa54837698a4caa492f9dc46230d4cef2df521d53",
         "abi": [
         	{
         		"constant": false,
@@ -199,13 +199,12 @@ Template.policiesItem.events({
 
     var contractAddress = this.address;
     var abi = this.abi;
-    console.log(contractAddress);
-    console.log(abi);
+
     myContract = web3.eth.contract(abi).at(contractAddress);
     myContract.s(function(error, result){
       console.log(result);
       alert(result);
-      if(result == "patient was dead"){
+      if(result == "patient was pronounced dead"){
         document.getElementById(contractAddress).setAttribute("class", "btn btn-danger");
       } else {
         document.getElementById(contractAddress).setAttribute("class", "btn btn-success");
