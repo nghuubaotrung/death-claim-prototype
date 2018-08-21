@@ -8,14 +8,14 @@ contract PersonIF{
 }
 
 contract BonjourWorld is ContractIF{
-    string public s = '';
+    string public s = 'patient is still alive';
 
     function notifyCall() payable{
-        s = 'I am called';
+        s = 'patient was pronounced dead';
     }
 
     function clearString() payable{
-        s = '';
+        s = 'patient is still alive';
     }
 
     function registerBonjour(address hellowAddress) public payable{

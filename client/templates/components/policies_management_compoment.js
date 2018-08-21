@@ -10,7 +10,7 @@ Template.policiesManagementComponent.helpers({
         "policy_holder": "AAA 様",
         "hospital": "AAA 病院",
         "insurer": "AAA 生命保険会社",
-        "address": "0x9f81dc312fa1966ab2675cc88bdb7d9e42687f77",
+        "address": "0xa12e5a79d1746501d4c6a2a92c1e49bcb5a487ec",
         "abi": [
         	{
         		"constant": false,
@@ -65,7 +65,7 @@ Template.policiesManagementComponent.helpers({
         "policy_holder": "BBB 様",
         "hospital": "AAA 病院",
         "insurer": "AAA 生命保険会社",
-        "address": "0x16ec46375b2b77098991e62c5e6559f3c797fca2",
+        "address": "0x76ad8408304d3447f1b54ae3a945b519fd847596",
         "abi": [
         	{
         		"constant": false,
@@ -120,7 +120,7 @@ Template.policiesManagementComponent.helpers({
         "policy_holder": "BBB 様",
         "hospital": "AAA 病院",
         "insurer": "AAA 生命保険会社",
-        "address": "0xa54837698a4caa492f9dc46230d4cef2df521d53",
+        "address": "0x076f8d5eefbfd95cb452831007575534252265bf",
         "abi": [
         	{
         		"constant": false,
