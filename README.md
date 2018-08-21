@@ -24,11 +24,5 @@
   * Policies List with Check Buttons
   * Showing status of each policies
 
-### Hospitals Page
-* Claim Triggers
-  * Policies List with "Death Claim" buttons
-    * Triggering the claim of each policies
-    * Note: Authority Check logic is not available in this prototype phase and will be updated in the next phases.
-
 ## System Summary
 ![System Summary](system_summary.png)
