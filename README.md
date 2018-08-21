@@ -19,11 +19,6 @@
   * Blocks Information
   * Transaction Information
 
-### Insurers Page
-* Policies Management
-  * Policies List with Check Buttons
-  * Showing status of each policies
-
 ### Hospitals Page
 * Claim Triggers
   * Policies List with "Death Claim" buttons
