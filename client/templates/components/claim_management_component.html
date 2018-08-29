@@ -1,16 +1,17 @@
 <template name="claimManagementComponent">
   <div class="panel panel-danger">
     <div class="panel-heading">
-      <h4>Death Claim Management</h4>
+      <h4>死亡登録画面</h4>
     </div>
     <table class="table">
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Policy Holder</th>
-          <th>Policy Type</th>
-          <th>Smart Contract Address</th>
-          <th>Status</th>
+          <th>名前</th>
+          <th>生年月日</th>
+          <th>性別</th>
+          <th>住所</th>
+          <th>死亡日</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -25,12 +26,14 @@
 <template name="claimItem">
   <tr>
     <td>{{name}}</td>
-    <td>{{policy_holder}}</td>
-    <td>{{insurer}}</td>
+    <td>{{birth}}</td>
+    <td>{{sex}}</td>
     <td>{{address}}</td>
+    <td>{{death_date}}</td>
+    <td></td>
     <td>
       <form onSubmit>
-        <button type="button" id={{address}} class="btn btn-danger"> Death Claim </button>
+        <button type="button" id={{address}} class="btn btn-danger"> 死亡登録 </button>
       </form>
     </td>
   </tr>

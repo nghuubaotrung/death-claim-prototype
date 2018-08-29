@@ -6,25 +6,28 @@ Template.claimManagementComponent.helpers({
   policies: function(){
     return [
       {
-        "name": "Policy 1",
+        "name": "信岡良彦",
         "policy_holder": "AAA 様",
         "hospital": "AAA 病院",
         "insurer": "死亡保険その1",
-        "address": "0xa12e5a79d1746501d4c6a2a92c1e49bcb5a487ec",
+        "address": "東京都練馬区",
+        "birth": "1978-12-??",
+        "sex": "男",
+        "death_date": "2018-09-06",
       },
       {
-        "name": "Policy 2",
+        "name": "Frank",
         "policy_holder": "BBB 様",
         "hospital": "AAA 病院",
         "insurer": "死亡保険その1",
         "address": "0x76ad8408304d3447f1b54ae3a945b519fd847596"
       },
       {
-        "name": "Policy 3",
+        "name": "Rob",
         "policy_holder": "BBB 様",
         "hospital": "AAA 病院",
         "insurer": "死亡保険その3",
-        "address": "0x076f8d5eefbfd95cb452831007575534252265bf"
+        "address": "東京都渋谷区"
       }
     ]
   }
