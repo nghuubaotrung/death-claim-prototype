@@ -6,28 +6,28 @@ Template.claimManagementComponent.helpers({
   policies: function(){
     return [
       {
-        "name": "信岡良彦",
-        "policy_holder": "AAA 様",
-        "hospital": "AAA 病院",
-        "insurer": "死亡保険その1",
+        "name": "Frank Eijsink",
         "address": "東京都練馬区",
-        "birth": "1978-12-??",
+        "birth": "1973/03/XX",
         "sex": "男",
-        "death_date": "2018-09-06",
+        "death_date": "",
+        "smart_contract_address": "0xa12e5a79d1746501d4c6a2a92c1e49bcb5a487ec",
       },
       {
-        "name": "Frank",
-        "policy_holder": "BBB 様",
-        "hospital": "AAA 病院",
-        "insurer": "死亡保険その1",
-        "address": "0x76ad8408304d3447f1b54ae3a945b519fd847596"
+        "name": "信岡良",
+        "address": "東京都練馬区",
+        "birth": "1977/12/XX",
+        "sex": "男",
+        "death_date": "2018/09/06",
+        "smart_contract_address": "0x76ad8408304d3447f1b54ae3a945b519fd847596",
       },
       {
-        "name": "Rob",
-        "policy_holder": "BBB 様",
-        "hospital": "AAA 病院",
-        "insurer": "死亡保険その3",
-        "address": "東京都渋谷区"
+        "name": "Rob Beattie",
+        "address": "東京都渋谷区",
+        "birth": "1971/11/XX",
+        "sex": "男",
+        "death_date": "",
+        "smart_contract_address": "",
       }
     ]
   }
@@ -57,7 +57,6 @@ Template.claimItem.events({
     console.log("Policy ID:" + this.address);
 
     var policyContractAddress = this.address;
-    // var policyABI = this.abi;
 
     var policyControllerAddress = "0xd4fe9170ff3241096f6cf1679c31159586cd3ac4";
     var policyControllerABI = [
@@ -164,15 +163,50 @@ Template.claimItem.events({
     web3.personal.unlockAccount(web3.eth.accounts[0], "123123123", 150000)
 
     policyController = web3.eth.contract(policyControllerABI).at(policyControllerAddress);
-    policyController.callBonjuor.sendTransaction(policyContractAddress, {
-        from:web3.eth.accounts[0],
-        gas:4000000},function (error, result){ // gas priceをあげたの方実行が早い
-          if(!error){
-            // Transaction IDを表示する
-            console.log("Transaction ID: " + result);
-          } else{
-            console.log(error);
-          }
+
+    if (policyContractAddress = "0x76ad8408304d3447f1b54ae3a945b519fd847596") {
+      policyController.callBonjuor.sendTransaction(policyContractAddress, {
+          from:web3.eth.accounts[0],
+          gas:4000000},function (error, result){ // gas priceをあげたの方実行が早い
+            if(!error){
+              // Transaction IDを表示する
+              console.log("Transaction ID: " + result);
+            } else{
+              console.log(error);
+            }
+          });
+
+      policyController.callBonjuor.sendTransaction("0x076f8d5eefbfd95cb452831007575534252265bf", {
+          from:web3.eth.accounts[0],
+          gas:4000000},function (error, result){ // gas priceをあげたの方実行が早い
+            if(!error){
+              // Transaction IDを表示する
+              console.log("Transaction ID: " + result);
+            } else{
+              console.log(error);
+            }
         });
+    } else {
+      policyController.callBonjuor.sendTransaction(policyContractAddress, {
+          from:web3.eth.accounts[0],
+          gas:4000000},function (error, result){ // gas priceをあげたの方実行が早い
+            if(!error){
+              // Transaction IDを表示する
+              console.log("Transaction ID: " + result);
+            } else{
+              console.log(error);
+            }
+          });
+    }
+    // policyController.callBonjuor.sendTransaction(policyContractAddress, {
+    //     from:web3.eth.accounts[0],
+    //     gas:4000000},function (error, result){ // gas priceをあげたの方実行が早い
+    //       if(!error){
+    //         // Transaction IDを表示する
+    //         console.log("Transaction ID: " + result);
+    //       } else{
+    //         console.log(error);
+    //       }
+    //     });
   },
 });
