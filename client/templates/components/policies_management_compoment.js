@@ -10,7 +10,7 @@ Template.policiesManagementComponent.helpers({
         "policy_holder": "AAA 様",
         "hospital": "死亡保険その1",
         "insurer": "AAA 生命保険会社",
-        "address": "0xa12e5a79d1746501d4c6a2a92c1e49bcb5a487ec",
+        "address": "0x39ea0c628e7511e756539147cf74e472a23090b6",
         "abi": [
         	{
         		"constant": false,
@@ -58,14 +58,20 @@ Template.policiesManagementComponent.helpers({
         		"stateMutability": "payable",
         		"type": "function"
         	}
-        ]
+        ],
+        "policy_number": "56781234",
+        "product_code": "TP",
+        "owner_name": "株式会社セリオテック",
+        "LA_name": "Frank Eijsink",
+        "birth": "1973/03/XX",
+        "sex": "男",
       },
       {
         "name": "Policy 2",
         "policy_holder": "BBB 様",
         "hospital": "死亡保険その2",
         "insurer": "AAA 生命保険会社",
-        "address": "0x76ad8408304d3447f1b54ae3a945b519fd847596",
+        "address": "0x68ddab9401c1f3b1f94cddd01314e066884a5e64",
         "abi": [
         	{
         		"constant": false,
@@ -113,14 +119,20 @@ Template.policiesManagementComponent.helpers({
         		"stateMutability": "payable",
         		"type": "function"
         	}
-        ]
+        ],
+        "policy_number": "87654321",
+        "product_code": "TU",
+        "owner_name": "平和酒造株式会社",
+        "LA_name": "信岡良彦",
+        "birth": "1977/12/XX",
+        "sex": "男",
       },
       {
         "name": "Policy 3",
         "policy_holder": "BBB 様",
         "hospital": "死亡保険その3",
         "insurer": "AAA 生命保険会社",
-        "address": "0x076f8d5eefbfd95cb452831007575534252265bf",
+        "address": "0x08346f3c58d1562d41d320060bfa8f58b4709b3a",
         "abi": [
         	{
         		"constant": false,
@@ -168,7 +180,13 @@ Template.policiesManagementComponent.helpers({
         		"stateMutability": "payable",
         		"type": "function"
         	}
-        ]
+        ],
+        "policy_number": "12345678",
+        "product_code": "TP",
+        "owner_name": "平和酒造株式会社",
+        "LA_name": "信岡良彦",
+        "birth": "1977/12/XX",
+        "sex": "男",
       }
     ]
   }
@@ -204,7 +222,7 @@ Template.policiesItem.events({
     myContract.s(function(error, result){
       console.log(result);
       alert(result);
-      if(result == "patient was pronounced dead"){
+      if(result == "被保険者が死亡しました。"){
         document.getElementById(contractAddress).setAttribute("class", "btn btn-danger");
       } else {
         document.getElementById(contractAddress).setAttribute("class", "btn btn-success");

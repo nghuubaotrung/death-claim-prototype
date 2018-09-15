@@ -1,16 +1,18 @@
 <template name="policiesManagementComponent">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h4>Policies Management</h4>
+      <h4>契約管理画面</h4>
     </div>
     <table class="table">
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Policy Holder</th>
-          <th>Policy Type</th>
-          <th>Smart Contract Address</th>
-          <th>Status</th>
+          <th>証券番号</th>
+          <th>商品コード</th>
+          <th>契約者名</th>
+          <th>被保険者名</th>
+          <th>生年月日</th>
+          <th>性別</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -24,13 +26,15 @@
 
 <template name="policiesItem">
   <tr>
-    <td>{{name}}</td>
-    <td>{{policy_holder}}</td>
-    <td>{{hospital}}</td>
-    <td>{{address}}</td>
+    <td>{{policy_number}}</td>
+    <td>{{product_code}}</td>
+    <td>{{owner_name}}</td>
+    <td>{{LA_name}}</td>
+    <td>{{birth}}</td>
+    <td>{{sex}}</td>
     <td>
       <form onSubmit>
-        <button type="button" id={{address}} class="btn btn-success"> Check Status </button>
+        <button type="button" id={{address}} class="btn btn-success"> 死亡確認 </button>
       </form>
     </td>
   </tr>
