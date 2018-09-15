@@ -10,16 +10,16 @@ Template.claimManagementComponent.helpers({
         "address": "東京都練馬区",
         "birth": "1973/03/XX",
         "sex": "男",
-        "death_date": "",
-        "smart_contract_address": "0xa12e5a79d1746501d4c6a2a92c1e49bcb5a487ec",
+        "death_date": "2018/09/06",
+        "smart_contract_address": "0x39ea0c628e7511e756539147cf74e472a23090b6",
       },
       {
-        "name": "信岡良",
+        "name": "信岡良彦",
         "address": "東京都練馬区",
         "birth": "1977/12/XX",
         "sex": "男",
-        "death_date": "2018/09/06",
-        "smart_contract_address": "0x76ad8408304d3447f1b54ae3a945b519fd847596",
+        "death_date": "2018/09/05",
+        "smart_contract_address": "0x68ddab9401c1f3b1f94cddd01314e066884a5e64",
       },
       {
         "name": "Rob Beattie",
@@ -56,9 +56,9 @@ Template.claimItem.events({
   'click': function(){
     console.log("Policy ID:" + this.address);
 
-    var policyContractAddress = this.address;
+    var policyContractAddress = this.smart_contract_address;
 
-    var policyControllerAddress = "0xd4fe9170ff3241096f6cf1679c31159586cd3ac4";
+    var policyControllerAddress = "0xd7b098a6d8271bbb1400fcc2721a6b8c098d9071";
     var policyControllerABI = [
       {
     		"constant": false,
@@ -164,7 +164,7 @@ Template.claimItem.events({
 
     policyController = web3.eth.contract(policyControllerABI).at(policyControllerAddress);
 
-    if (policyContractAddress = "0x76ad8408304d3447f1b54ae3a945b519fd847596") {
+    if (policyContractAddress == "0x68ddab9401c1f3b1f94cddd01314e066884a5e64") {
       policyController.callBonjuor.sendTransaction(policyContractAddress, {
           from:web3.eth.accounts[0],
           gas:4000000},function (error, result){ // gas priceをあげたの方実行が早い
@@ -176,7 +176,7 @@ Template.claimItem.events({
             }
           });
 
-      policyController.callBonjuor.sendTransaction("0x076f8d5eefbfd95cb452831007575534252265bf", {
+      policyController.callBonjuor.sendTransaction("0x08346f3c58d1562d41d320060bfa8f58b4709b3a", {
           from:web3.eth.accounts[0],
           gas:4000000},function (error, result){ // gas priceをあげたの方実行が早い
             if(!error){
